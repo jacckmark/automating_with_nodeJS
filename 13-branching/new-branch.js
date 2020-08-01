@@ -16,10 +16,10 @@ const ticketId = readLineSync.question(`What is the ticket ID? `, {
     // this is an property which checks if the user input is meeting the validation 
     // requirements
     limit: input => input.trim().length > 0,
-    // if the user will not meet the requirements specified in limit this message
+    // if the user will not meet the requirements (specified in limit) this message
     // will be shown
     limitMessage: `Please enter a ticket ID (e.g. GOT-123)`
 });
 
-// now we are creating a new branch based on user input
+// now we are creating a new branch based on user
 shell.exec(`git checkout -b ${ticketId}`);
